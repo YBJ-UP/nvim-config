@@ -180,6 +180,16 @@ require("dashboard").setup(
 					key_hl = 'Number',
 					key_format = ' [%s]',
 					action = 'e ~/.config/nvim/init.lua'
+				},
+
+				{
+					desc = 'Cerrar NeoVim',
+					desc_hl = 'Title',
+					key = 'q',
+					key_hl = 'Number',
+					keymap = ':q',
+					key_format = ' [%s]',
+					action = 'q'
 				}
 			},
 
