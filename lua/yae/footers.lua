@@ -4,6 +4,12 @@ local footers = {
 	},
 	coal = {
 		"Alerta de carbón"
+	},
+	emacs = {
+		"Apoyo la destrucción total de emacs"
+	},
+	nvimbtw = {
+		"Uso neovim btw"
 	}
 }
 
