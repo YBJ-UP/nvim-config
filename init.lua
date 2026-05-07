@@ -1,7 +1,5 @@
 require("yae")
 
-local lsp_servers = { "lua_ls", "clangd", "pyright", "vscode-html-server" }
-
 vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 
@@ -89,10 +87,6 @@ local function pack_clean()
 	if choice == 1 then
 		vim.pack.delete(unused_plugins)
 	end
-end
-
-for _, server in ipairs(lsp_servers) do
-	vim.lsp.enable(server)
 end
 
 vim.keymap.set("n", "<leader>pc", pack_clean)
