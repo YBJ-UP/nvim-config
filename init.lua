@@ -25,7 +25,11 @@ vim.pack.add({
 	{ src = 'https://github.com/nvim-lualine/lualine.nvim' },
 
 	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter' }, -- autotag depende de tree sitter
-	{ src = 'https://github.com/windwp/nvim-ts-autotag' }
+	{ src = 'https://github.com/windwp/nvim-ts-autotag' },
+
+	{ src = 'https://github.com/mfussenegger/nvim-dap' },
+	{ src = 'https://github.com/rcarriga/nvim-dap-ui' },
+	{ src = 'https://github.com/Mathijs-Bakker/godotdev.nvim' }
 })
 
 require("mini.pick").setup()
@@ -68,6 +72,8 @@ require("mason-lspconfig").setup()
 
 require("toggleterm").setup()
 require("lazydocker").setup()
+
+require("godotdev").setup()
 
 local function pack_clean()
 	local used_plugins = {}
