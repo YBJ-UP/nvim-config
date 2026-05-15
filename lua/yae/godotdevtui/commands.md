@@ -1,5 +1,9 @@
 # Comandos disponibles
 
+> [!IMPORTANT]
+> Estos comandos solamente funcionan dentro de un proyecto de Godot.
+> Usarlos fuera de uno causará errores
+
 1. GodotDocs                    [d]
 2. GodotReconnectLSP            [l]
 3. GodotRunProject              [r]
