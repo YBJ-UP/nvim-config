@@ -29,7 +29,9 @@ vim.pack.add({
 
 	{ src = 'https://github.com/mfussenegger/nvim-dap' },
 	{ src = 'https://github.com/rcarriga/nvim-dap-ui' },
-	{ src = 'https://github.com/Mathijs-Bakker/godotdev.nvim' }
+	{ src = 'https://github.com/Mathijs-Bakker/godotdev.nvim' },
+
+	{ src = "https://github.com/OXY2DEV/markview.nvim" }
 })
 
 require("mini.pick").setup()
