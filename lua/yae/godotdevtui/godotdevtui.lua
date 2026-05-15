@@ -7,10 +7,18 @@ local default_opts = {
 	width = 0.8,
 	height = 0.8,
 	position = "center",
-	border = "single"
+	border = "single",
+	target_file = "~/.config/nvim/lua/yae/godotdevtui/commands.md"
 }
 
 local G = {}
+
+local function expand_path(path)
+	if path:sub(1, 1) == "~" then
+		return os.getenv("HOME") .. path:sub(2)
+	end
+	return path
+end
 
 local function calculate_pos(pos)
 	local posx, posy = 0.5, 0.5
@@ -44,11 +52,25 @@ local function set_config(opts)
 end
 
 local function open_floating_window(opts)
-	if not tui_state.buf or not vim.api.nvim_buf_is_valid(tui_state.buf) then
-		tui_state.buf = vim.api.nvim_create_buf(false, true)
+	if tui_state.win and vim.api.nvim_win_is_valid(tui_state.win) then
+		vim.api.set_current_win(tui_state.win)
+		return
 	end
 
-	print("test")
+	local expanded_path = expand_path(opts.target_file)
+
+	if vim.fn.filereadable(expanded_path) == 0 then
+		vim.notify("No se encontró el archivo " .. expanded_path, vim.log.levels.ERROR)
+		return
+	end
+
+	tui_state.buf = vim.fn.bufnr(expanded_path, true)
+
+	if tui_state.buf == -1 then
+		tui_state.buf = vim.api.nvim_create_buf(false, false)
+		vim.api.nvim_buf_set_name(tui_state.buf, expanded_path)
+	end
+
 	tui_state.win = vim.api.nvim_open_win(tui_state.buf, true, set_config(opts))
 end
 
