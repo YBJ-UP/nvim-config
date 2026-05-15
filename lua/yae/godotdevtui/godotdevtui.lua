@@ -4,8 +4,8 @@ local tui_state = {
 }
 
 local default_opts = {
-	width = 0.8,
-	height = 0.8,
+	width = 1.0,
+	height = 0.35,
 	position = "center",
 	border = "single",
 	target_file = "~/.config/nvim/lua/yae/godotdevtui/commands.md"
@@ -71,7 +71,26 @@ local function open_floating_window(opts)
 		vim.api.nvim_buf_set_name(tui_state.buf, expanded_path)
 	end
 
+	vim.bo[tui_state.buf].swapfile = false
+	vim.bo[tui_state.buf].modifiable = false
+	vim.bo[tui_state.buf].readonly = true
+
 	tui_state.win = vim.api.nvim_open_win(tui_state.buf, true, set_config(opts))
+
+	vim.wo[tui_state.win].number = false
+	vim.wo[tui_state.win].relativenumber = false
+	vim.wo[tui_state.win].wrap = true
+
+	vim.api.nvim_buf_set_keymap(tui_state.buf, "n", "q", "", {
+		noremap = true,
+		silent = true,
+		callback = function()
+			vim.api.nvim_win_close(0, true)
+			tui_state.win = nil
+		end
+	})
+
+	vim.api.nvim_buf_set_keymap(tui_state.buf, "n", "r", ":GodotRunProject<CR>", { noremap = true, silent = true })
 end
 
 local function setup_user_commands(opts)
@@ -88,4 +107,3 @@ end
 
 
 return G
-
