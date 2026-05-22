@@ -11,7 +11,7 @@ require("dashboard").setup(
 		theme = "doom",
 
 		config = {
-				header = titles.cheese,
+				header = titles.eyes,
 
 			center = {
 				{
@@ -72,6 +72,16 @@ require("dashboard").setup(
 					key_hl = 'Number',
 					key_format = ' [%s]',
 					action = 'Lazydocker'
+				},
+
+				{
+					desc= 'Panel de Godot',
+					desc_hl='Title',
+					key='gd',
+					keymap='SPC gd',
+					key_hl='Number',
+					key_format=' [%s]',
+					action='Gdt'
 				},
 
 				{

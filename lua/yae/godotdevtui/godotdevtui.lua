@@ -90,7 +90,7 @@ local function open_floating_window(opts)
 		end
 	})
 
-	vim.api.nvim_buf_set_keymap(tui_state.buf, "n", "r", ":GodotRunProject<CR>", { noremap = true, silent = true })
+	vim.api.nvim_buf_set_keymap(tui_state.buf, "n", "r", ":! godot<CR>", { noremap = true, silent = true })
 end
 
 local function setup_user_commands(opts)
