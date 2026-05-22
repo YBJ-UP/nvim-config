@@ -7,8 +7,6 @@ vim.opt.showtabline = 2 -- Always show tabline (0=never, 1=when multiple tabs, 2
 vim.opt.tabline = ''    -- Use default tabline (empty string uses built-in)
 
 -- Alternative navigation (more intuitive)
-vim.keymap.set('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab' })
-vim.keymap.set('n', '<leader>tq', ':tabclose<CR>', { desc = 'Close tab' })
 
 -- Tab moving
 vim.keymap.set('n', '<leader>tm', ':tabmove<CR>', { desc = 'Move tab' })
@@ -55,7 +53,8 @@ end
 
 -- Enhanced keybindings
 vim.keymap.set('n', '<leader>ton', open_file_in_tab, { desc = 'Open file in new tab' })
-vim.keymap.set('n', '<leader>td', duplicate_tab, { desc = 'Duplicate current tab' })
+vim.keymap.set('n', '<C-t>', duplicate_tab, { desc = 'Duplicate current tab' })
+vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { desc = 'Close tab' })
 vim.keymap.set('n', '<leader>tqr', close_tabs_right, { desc = 'Close tabs to the right' })
 vim.keymap.set('n', '<leader>tql', close_tabs_left, { desc = 'Close tabs to the left' })
 
@@ -71,3 +70,5 @@ local function smart_close_buffer()
 end
 vim.keymap.set('n', '<leader>bd', smart_close_buffer, { desc = 'Smart close buffer/tab' })
 
+vim.keymap.set("n", "<C-Tab>", ":tabnext<CR>")
+vim.keymap.set("n", "<C-S-Tab>", ":tabprevious<CR>")
