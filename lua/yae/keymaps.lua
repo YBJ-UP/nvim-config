@@ -36,7 +36,3 @@ vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config" }
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "show diagnostics" })
 vim.keymap.set("n", "<leader>def", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-
-vim.keymap.set("n", "<C-i>", ":bn<CR>")
-vim.keymap.set("n", "<C-S-i>", ":bp<CR>")
-vim.keymap.set("n", "<C-A-i>", ":%bd|e#|bd#<CR>")

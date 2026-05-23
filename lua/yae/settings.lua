@@ -13,6 +13,7 @@ vim.opt.softtabstop = 4
 vim.expandtab = true
 vim.autoindent = true
 vim.smartindent = true
+vim.cmd("set completeopt+=noselect")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
