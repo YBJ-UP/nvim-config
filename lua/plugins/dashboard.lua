@@ -45,7 +45,7 @@ require("dashboard").setup(
 				},
 
 				{
-					desc = 'Buscar palabras',
+					desc = 'Buscar texto',
 					desc_hl = 'Title',
 					key = 'w',
 					keymap = 'SPC gr',

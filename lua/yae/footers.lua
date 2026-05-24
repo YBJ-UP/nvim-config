@@ -9,7 +9,7 @@ local footers = {
 		"Apoyo la destrucción total de emacs"
 	},
 	nvimbtw = {
-		"Uso neovim btw"
+		"Uso neovim por cierto"
 	}
 }
 

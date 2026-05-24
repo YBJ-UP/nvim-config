@@ -1,7 +1,4 @@
--- ============================================================================
--- TABS
--- ============================================================================
-
+-- Todo esto salío de un video de YouTube y ya no recuerdo cuál era xd
 -- Tab display settings
 vim.opt.showtabline = 2 -- Always show tabline (0=never, 1=when multiple tabs, 2=always)
 vim.opt.tabline = ''    -- Use default tabline (empty string uses built-in)
@@ -53,10 +50,10 @@ end
 
 -- Enhanced keybindings
 vim.keymap.set('n', '<leader>ton', open_file_in_tab, { desc = 'Open file in new tab' })
-vim.keymap.set('n', '<C-t>', duplicate_tab, { desc = 'Duplicate current tab' })
 vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { desc = 'Close tab' })
-vim.keymap.set('n', '<leader>tqr', close_tabs_right, { desc = 'Close tabs to the right' })
-vim.keymap.set('n', '<leader>tql', close_tabs_left, { desc = 'Close tabs to the left' })
+vim.keymap.set('n', '<C-t>', duplicate_tab, { desc = 'Duplicate current tab' })
+vim.keymap.set('n', '<C-S-t>', close_tabs_right, { desc = 'Close tabs to the right' })
+vim.keymap.set('n', '<C-A-t>', close_tabs_left, { desc = 'Close tabs to the left' })
 
 -- Function to close buffer but keep tab if it's the only buffer in tab
 local function smart_close_buffer()

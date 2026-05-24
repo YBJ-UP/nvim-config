@@ -9,7 +9,6 @@ require("mini.pairs").setup()
 require("mini.surround").setup()
 require("mini.notify").setup()
 require("mini.icons").setup()
-require("mini.tabline").setup()
 require("mini.animate").setup()
 require("mini.trailspace").setup()
 
