@@ -29,6 +29,7 @@ vim.keymap.set("n", "<leader>rc", ":e $MYVIMRC<CR>", { desc = "Edit config" })
 vim.keymap.set("n", "<A-r>", ":restart<CR>") -- Reinicia NeoVim
 
 -- Permite ver diagnosticos, acciones y definiciones de código
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "show diagnostics" })
 vim.keymap.set("n", "<leader>def", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
