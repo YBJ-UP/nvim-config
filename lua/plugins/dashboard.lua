@@ -2,8 +2,8 @@ local titles = require("yae.titles")
 local footers = require("yae.footers")
 
 vim.pack.add({
-		{ src = "https://github.com/nvimdev/dashboard-nvim" }
-	}
+	{ src = "https://github.com/nvimdev/dashboard-nvim" }
+}
 )
 
 require("dashboard").setup(
@@ -11,7 +11,7 @@ require("dashboard").setup(
 		theme = "doom",
 
 		config = {
-				header = titles.eyes,
+			header = titles.eyes,
 
 			center = {
 				{
@@ -89,13 +89,13 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc= 'Panel de Godot',
-					desc_hl='Title',
-					key='gd',
-					keymap='SPC gd',
-					key_hl='Number',
-					key_format=' [%s]',
-					action='Gdt'
+					desc = 'Panel de Godot',
+					desc_hl = 'Title',
+					key = 'gd',
+					keymap = 'SPC gd',
+					key_hl = 'Number',
+					key_format = ' [%s]',
+					action = 'Gdt'
 				},
 
 				{
