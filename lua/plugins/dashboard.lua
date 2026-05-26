@@ -15,6 +15,8 @@ require("dashboard").setup(
 
 			center = {
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Abrir explorador de archivos',
 					desc_hl = 'Title',
 					key = 'e',
@@ -25,6 +27,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = '󰥩 ',
+					icon_hl = 'Title',
 					desc = 'Buscar archivos en el directorio',
 					desc_hl = 'Title',
 					key = 'f',
@@ -35,6 +39,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Ver buffers abiertos',
 					desc_hl = 'Title',
 					key = "b",
@@ -45,6 +51,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = '󰦨 ',
+					icon_hl = 'Title',
 					desc = 'Buscar texto',
 					desc_hl = 'Title',
 					key = 'w',
@@ -55,6 +63,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Abrir Git',
 					desc_hl = 'Title',
 					key = 'g',
@@ -65,6 +75,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Abrir Docker',
 					desc_hl = 'Title',
 					key = 'd',
@@ -75,6 +87,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc= 'Panel de Godot',
 					desc_hl='Title',
 					key='gd',
@@ -85,6 +99,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Imprimir directorio actual',
 					desc_hl = 'Title',
 					key = 'c',
@@ -94,6 +110,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Reiniciar configuraciones',
 					desc_hl = 'Title',
 					key = 'r',
@@ -103,6 +121,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
 					desc = 'Editar configuraciones',
 					desc_hl = 'Title',
 					key = 'E',
@@ -112,6 +132,8 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = '󰩈 ',
+					icon_hl = 'Title',
 					desc = 'Cerrar NeoVim',
 					desc_hl = 'Title',
 					key = 'q',
