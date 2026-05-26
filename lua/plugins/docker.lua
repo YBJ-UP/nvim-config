@@ -7,7 +7,10 @@ vim.pack.add(
 	}
 )
 
-require("toggleterm").setup()
-require("lazydocker").setup()
+local function open_docker() -- No sé si esto funciona como carga perezosa pero pues a ver si sí
+	require("toggleterm").setup()
+	require("lazydocker").setup()
+	vim.cmd('Lazydocker')
+end
 
-vim.keymap.set("n", "<leader>ld", ":Lazydocker<CR>")
+vim.keymap.set("n", "<leader>ld", open_docker)

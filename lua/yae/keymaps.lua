@@ -1,5 +1,5 @@
 -- Centra el cursor al usar estos comandos
-vim.keymap.set("n", "n", "nzzzv") 
+vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -29,6 +29,8 @@ vim.keymap.set("n", "<leader>rc", ":e $MYVIMRC<CR>", { desc = "Edit config" })
 vim.keymap.set("n", "<A-r>", ":restart<CR>") -- Reinicia NeoVim
 
 -- Permite ver diagnosticos, acciones y definiciones de código
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "show diagnostics" })
 vim.keymap.set("n", "<leader>def", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
+-- Reemplaza la palabra bajo el cursor (solo dentro del archivo)
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

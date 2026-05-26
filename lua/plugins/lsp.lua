@@ -28,6 +28,18 @@ require("blink.cmp").setup({
 	fuzzy = { implementation = "prefer_rust" }
 })
 
+vim.diagnostic.config({
+	virtual_text = true
+})
+
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = { globals = { "vim" } },
+		},
+	},
+})
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 
