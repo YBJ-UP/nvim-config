@@ -5,4 +5,4 @@ require("plugins.plenary")
 
 vim.pack.add({"https://github.com/mikavilpas/yazi.nvim"})
 
-vim.keymap.set("n", "<leader>e", ":Yazi<CR>", { desc = "Open file explorer" })
+-- vim.keymap.set("n", "<leader>e", ":Yazi<CR>", { desc = "Open file explorer" })

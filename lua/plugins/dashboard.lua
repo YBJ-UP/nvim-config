@@ -23,7 +23,7 @@ require("dashboard").setup(
 					keymap = 'SPC e',
 					key_hl = 'Number',
 					key_format = ' [%s]', -- remove default surrounding `[]`
-					action = 'Yazi'
+					action = 'NvimTreeToggle'
 				},
 
 				{

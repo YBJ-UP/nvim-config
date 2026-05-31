@@ -5,6 +5,9 @@ local opts = {
 	diagnostics = {
 		enable = true
 	},
+	modified = {
+		enable = true
+	},
 	renderer = {
 		icons = {
 			glyphs = {
@@ -17,9 +20,6 @@ local opts = {
 	}
 }
 
-local open_tree = function()
-	require("nvim-tree").setup(opts)
-	vim.cmd("NvimTreeFocus")
-end
+require("nvim-tree").setup(opts)
 
-vim.keymap.set("n", "<leader>ee", open_tree)
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
