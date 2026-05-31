@@ -23,3 +23,4 @@ local opts = {
 require("nvim-tree").setup(opts)
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>ee", ":NvimTreeFocus<CR>")

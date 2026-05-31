@@ -1,5 +1,6 @@
 local titles = require("yae.titles")
 local footers = require("yae.footers")
+local docker = require("plugins.docker")
 
 vim.pack.add({
 	{ src = "https://github.com/nvimdev/dashboard-nvim" }
@@ -83,7 +84,7 @@ require("dashboard").setup(
 					keymap = 'SPC ld',
 					key_hl = 'Number',
 					key_format = ' [%s]',
-					action = 'Lazydocker'
+					action = docker.open_docker
 				},
 
 				{
