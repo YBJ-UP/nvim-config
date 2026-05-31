@@ -8,7 +8,7 @@ local default_opts = {
 	height = 0.35,
 	position = "center",
 	border = "single",
-	target_file = "~/.config/nvim/lua/yae/godotdevtui/commands.md"
+	target_file = "./commands.md"
 }
 
 local G = {}

@@ -6,6 +6,9 @@ vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
 vim.g.netrw_banner = 0
 
+vim.o.mouse = 'a'
+vim.o.mousemoveevent = true
+
 vim.cmd.colorscheme("catppuccin")
 
 vim.opt.tabstop = 4
