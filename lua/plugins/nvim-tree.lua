@@ -7,6 +7,7 @@ local opts = {
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = true,
 	respect_buf_cwd = false,
+	update_cwd = true,
 	view = {
 		centralize_selection = true,
 		side = "right",
@@ -31,6 +32,12 @@ local opts = {
 					untracked = "+"
 				}
 			}
+		}
+	},
+	actions = {
+		change_dir = {
+			enable = true,
+			global = true
 		}
 	}
 }
