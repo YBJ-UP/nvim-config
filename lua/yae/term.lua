@@ -21,7 +21,6 @@ local spawn_floating = {
 		relative = 'editor',
 		width = 0.5,
 		height = 0.5,
-		position = 'center',
 		border = 'single'
 	}
 }
@@ -32,12 +31,15 @@ local default_opts = {
 
 local G = {}
 
-local function set_config(opts)
-	if opts.preset == "spawn_on_bottom" then
-		print("abajo")
+local function set_config(preset)
+	if preset == "spawn_on_bottom" then
+		return spawn_on_bottom
+	elseif preset == "spawn_floating" then
+		return spawn_floating
+	else
+		vim.notify("Preset inválido: " .. preset .. "\nUtilizando el preset 'spawn_on_bottom' como alternativa", vim.log.levels.WARN)
 		return spawn_on_bottom
 	end
-	return opts
 end
 
 local function open_term(opts)
@@ -83,26 +85,12 @@ local function open_term(opts)
 	end
 end
 
-local function dump(o)
-	if type(o) == 'table' then
-		local s = '{ '
-		for k, v in pairs(o) do
-			if type(k) ~= 'number' then k = '"' .. k .. '"' end
-			s = s .. '[' .. k .. '] = ' .. dump(v) .. ','
-		end
-		return s .. '} '
-	else
-		return tostring(o)
-	end
-end
-
 local function setup_user_commands(opts)
 	if opts == nil then
 		opts = default_opts
 	end
 	if opts.preset ~= nil then
-		opts = set_config(opts)
-		dump(opts)
+		opts = set_config(opts.preset)
 	else
 		opts = vim.tbl_deep_extend("force", default_opts, opts or {})
 	end
