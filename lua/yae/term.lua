@@ -17,19 +17,47 @@ local spawn_on_bottom = {
 
 local spawn_floating = {
 	close_on_leave = true,
+	floating_opts = {
+		pos = 'center',
+		width = 0.6,
+		height = 0.5
+	},
 	term_opts = {
 		relative = 'editor',
-		width = 0.5,
-		height = 0.5,
 		border = 'single'
 	}
 }
 
 local default_opts = {
-	preset = "spawn_on_bottom"
+	preset = "spawn_floating"
 }
 
+local current_settings = {}
+
 local G = {}
+
+local function get_floating_size(pos) -- pq no tiene switch el lua como me cae mal
+	local posx, posy = 0.5, 0.5
+	if pos == 'center' then
+		posx, posy = 0.5, 0.5
+	elseif pos == 'topcenter' then
+		posx, posy = 0.5, 0
+	elseif pos == 'bottocenter' then
+		posx, posy = 0.5, 1.0
+	elseif pos == 'topleft' then
+		posx, posy = 0.0, 0.0
+	elseif pos == 'topright' then
+		posx, posy = 1.0, 0
+	elseif pos == 'bottomleft' then
+		posx, posy = 0.0, 1.0
+	elseif pos == 'bottomright' then
+		posx, posy = 1.0, 0.0
+	else
+		vim.notify("Posición inválida o no soportada: " .. pos .. "\nPosicionando en el centro", vim.log.levels.WARN)
+		posx, posy = 0.5, 0.5
+	end
+	return posx, posy
+end
 
 local function set_config(preset)
 	if preset == "spawn_on_bottom" then
@@ -37,7 +65,8 @@ local function set_config(preset)
 	elseif preset == "spawn_floating" then
 		return spawn_floating
 	else
-		vim.notify("Preset inválido: " .. preset .. "\nUtilizando el preset 'spawn_on_bottom' como alternativa", vim.log.levels.WARN)
+		vim.notify("Preset inválido: " .. preset .. "\nUtilizando el preset 'spawn_on_bottom' como alternativa",
+			vim.log.levels.WARN)
 		return spawn_on_bottom
 	end
 end
@@ -51,6 +80,15 @@ local function open_term(opts)
 	if not state.buf or not api.nvim_buf_is_valid(state.buf) then
 		state.buf = api.nvim_create_buf(false, true)
 		vim.bo[state.buf].bufhidden = 'hide'
+	end
+
+	if opts.floating_opts ~= nil then
+		local posx, posy = get_floating_size(opts.floating_opts.pos)
+		opts.term_opts.width = math.max(math.floor(vim.o.columns * opts.floating_opts.width), 64)
+		opts.term_opts.height = math.floor(vim.o.lines * opts.floating_opts.height)
+
+		opts.term_opts.col = math.floor((vim.o.columns - opts.term_opts.width) * posx)
+		opts.term_opts.row = math.floor((vim.o.lines - opts.term_opts.height) * posy)
 	end
 
 	state.win = api.nvim_open_win(state.buf, true, opts.term_opts)
