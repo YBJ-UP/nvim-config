@@ -6,25 +6,38 @@ local state = {
 
 local api = vim.api
 
-local spawnOnBot = {
-	split = 'below',
-	win = -1,
-	height = 20
-}
-
-local default_opts = {
+local spawn_on_bottom = {
 	close_on_leave = false,
 	term_opts = {
-		split = "below",
+		split = 'below',
 		win = -1,
 		height = 20
 	}
 }
 
+local spawn_floating = {
+	close_on_leave = true,
+	term_opts = {
+		relative = 'editor',
+		width = 0.5,
+		height = 0.5,
+		position = 'center',
+		border = 'single'
+	}
+}
+
+local default_opts = {
+	preset = "spawn_on_bottom"
+}
+
 local G = {}
 
-local function set_config()
-	print("lol")
+local function set_config(opts)
+	if opts.preset == "spawn_on_bottom" then
+		print("abajo")
+		return spawn_on_bottom
+	end
+	return opts
 end
 
 local function open_term(opts)
@@ -70,10 +83,31 @@ local function open_term(opts)
 	end
 end
 
-local function setup_user_commands(opts)
-	opts = vim.tbl_deep_extend("force", default_opts, opts or {})
+local function dump(o)
+	if type(o) == 'table' then
+		local s = '{ '
+		for k, v in pairs(o) do
+			if type(k) ~= 'number' then k = '"' .. k .. '"' end
+			s = s .. '[' .. k .. '] = ' .. dump(v) .. ','
+		end
+		return s .. '} '
+	else
+		return tostring(o)
+	end
+end
 
-	api.nvim_create_user_command("Ola", function()
+local function setup_user_commands(opts)
+	if opts == nil then
+		opts = default_opts
+	end
+	if opts.preset ~= nil then
+		opts = set_config(opts)
+		dump(opts)
+	else
+		opts = vim.tbl_deep_extend("force", default_opts, opts or {})
+	end
+
+	api.nvim_create_user_command("OpenTerm", function()
 		open_term(opts)
 	end, {})
 
@@ -87,6 +121,10 @@ end
 
 G.setup = function(opts)
 	setup_user_commands(opts)
+end
+
+G.exec = function(cmd)
+	print(cmd)
 end
 
 return G

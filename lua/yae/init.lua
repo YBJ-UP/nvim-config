@@ -8,7 +8,7 @@ require("yae.term").setup()
 require("yae.buffers")
 
 vim.keymap.set("n", "<leader>gd", ":Gdt<CR>")
-vim.keymap.set("n", "<leader>tt", ":Ola<CR>")
+vim.keymap.set("n", "<leader>tt", ":OpenTerm<CR>")
 
 local function call_mgr()
 	return require("yae.plugin_manager")
