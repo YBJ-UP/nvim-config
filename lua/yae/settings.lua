@@ -11,6 +11,28 @@ vim.o.mousemoveevent = true
 
 vim.cmd.colorscheme("catppuccin")
 
+local function set_transparent() -- set UI component to transparent
+	local groups = {
+		"Normal",
+		"NormalNC",
+		"EndOfBuffer",
+		"NormalFloat",
+		"FloatBorder",
+		"SignColumn",
+		"StatusLine",
+		"StatusLineNC",
+		"TabLine",
+		"TabLineFill",
+		"TabLineSel",
+		"ColorColumn",
+	}
+	for _, g in ipairs(groups) do
+		vim.api.nvim_set_hl(0, g, { bg = "none" })
+	end
+end
+
+set_transparent()
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
