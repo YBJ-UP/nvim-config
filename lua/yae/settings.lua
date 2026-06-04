@@ -31,7 +31,7 @@ local function set_transparent() -- set UI component to transparent
 	end
 end
 
-set_transparent()
+--set_transparent()
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
