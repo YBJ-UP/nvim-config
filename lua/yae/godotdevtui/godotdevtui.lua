@@ -4,11 +4,11 @@ local tui_state = {
 }
 
 local default_opts = {
-	width = 1.0,
+	width = 0.35,
 	height = 0.35,
 	position = "center",
 	border = "single",
-	target_file = "./commands.md"
+	target_file = "~/.config/nvim/lua/yae/godotdevtui/commands.md"
 }
 
 local G = {}
@@ -33,7 +33,7 @@ local function calculate_pos(pos)
 end
 
 local function set_config(opts)
-	local width = math.min(math.floor(vim.o.columns * opts.width), 64)
+	local width = math.max(math.floor(vim.o.columns * opts.width), 64)
 	local height = math.floor(vim.o.lines * opts.height)
 
 	local posx, posy = calculate_pos(opts.position)

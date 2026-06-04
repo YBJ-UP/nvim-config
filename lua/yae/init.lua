@@ -1,14 +1,12 @@
 require("yae.keymaps")
 require("yae.settings")
---require("yae.terminal")
 require("yae.tabs")
 require("yae.functions")
 require("yae.godotdevtui.godotdevtui").setup()
-require("yae.term").setup()
 require("yae.buffers")
 
+
 vim.keymap.set("n", "<leader>gd", ":Gdt<CR>")
-vim.keymap.set("n", "<leader>tt", ":OpenTerm<CR>")
 
 local function call_mgr()
 	return require("yae.plugin_manager")
@@ -26,3 +24,4 @@ end
 
 vim.keymap.set("n", "<leader>pk", active_packs)
 vim.keymap.set("n", "<leader>pc", pack_clean)
+vim.keymap.set("n", "<leader>pku", vim.pack.update)
