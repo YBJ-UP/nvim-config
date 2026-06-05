@@ -9,7 +9,8 @@ vim.g.netrw_banner = 0
 vim.o.mouse = 'a'
 vim.o.mousemoveevent = true
 
-vim.cmd.colorscheme("catppuccin")
+--vim.cmd.colorscheme("catppuccin")
+require("2077_theme").colorscheme()
 
 local function set_transparent() -- set UI component to transparent
 	local groups = {
