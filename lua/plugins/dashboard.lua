@@ -40,15 +40,15 @@ require("dashboard").setup(
 				},
 
 				{
-					icon = ' ',
+					icon = '󰋗 ',
 					icon_hl = 'Title',
-					desc = 'Ver buffers abiertos',
+					desc = 'Buscar documentación',
 					desc_hl = 'Title',
-					key = "b",
-					keymap = 'SPC b',
+					key = "h",
+					keymap = 'SPC h',
 					key_hl = 'Number',
 					key_format = ' [%s]',
-					action = 'Pick buffers'
+					action = 'Pick help'
 				},
 
 				{
