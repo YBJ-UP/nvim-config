@@ -1,7 +1,11 @@
 {
   "plugins": {
+    "2077_theme.nvim": {
+      "rev": "1fbb89a1da57b559fe7eabfac4c682f510778cb2",
+      "src": "https://github.com/YBJ-UP/2077_theme.nvim"
+    },
     "blink.cmp": {
-      "rev": "d2c4d170ad51e5116da7b19f2426f3b6e318161d",
+      "rev": "3db7326f54b73df4789e0fd6274bedda33975fea",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -49,7 +53,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "11afe78a10570fe1d0c7ed0b6fc2b5b19098cb45",
+      "rev": "b2ac6522f7a54b475d9fad711b938eefc6d3d0a6",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-dap": {
@@ -85,7 +89,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "terminal_plus.nvim": {
-      "rev": "8071fd370dfdf3ef913c78fb7bc0c7211035ffc2",
+      "rev": "bc3391ca8e4f36d12d2d71d3a58c56879750e1f4",
       "src": "https://github.com/YBJ-UP/terminal_plus.nvim"
     },
     "toggleterm.nvim": {
