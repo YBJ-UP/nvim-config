@@ -9,9 +9,6 @@ vim.g.netrw_banner = 0
 vim.o.mouse = 'a'
 vim.o.mousemoveevent = true
 
---vim.cmd.colorscheme("catppuccin")
-require("2077_theme").colorscheme()
-
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
