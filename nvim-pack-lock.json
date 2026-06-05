@@ -91,10 +91,6 @@
     "toggleterm.nvim": {
       "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
       "src": "https://github.com/akinsho/toggleterm.nvim"
-    },
-    "yazi.nvim": {
-      "rev": "c6c48ab8dbe8a2c804227ac7c7c29b21ef8b3f03",
-      "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
 }
