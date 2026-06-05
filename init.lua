@@ -1,2 +1,2 @@
-require("yae")
+require("core")
 require("plugins")

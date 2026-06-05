@@ -1,15 +1,15 @@
-require("yae.keymaps")
-require("yae.settings")
-require("yae.tabs")
-require("yae.functions")
-require("yae.godotdevtui.godotdevtui").setup()
-require("yae.buffers")
+require("core.keymaps")
+require("core.settings")
+require("core.tabs")
+require("core.functions")
+require("core.godotdevtui.godotdevtui").setup()
+require("core.buffers")
 
 
 vim.keymap.set("n", "<leader>gd", ":Gdt<CR>")
 
 local function call_mgr()
-	return require("yae.plugin_manager")
+	return require("core.plugin_manager")
 end
 
 local function active_packs()

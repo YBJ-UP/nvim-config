@@ -1,5 +1,5 @@
-local titles = require("yae.titles")
-local footers = require("yae.footers")
+local titles = require("core.titles")
+local footers = require("core.footers")
 local docker = require("plugins.docker")
 
 vim.pack.add({
