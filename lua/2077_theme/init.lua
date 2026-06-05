@@ -13,7 +13,7 @@ local colors = {
 	cursorLine = "#1C1347", --azul más oscuro
 	special = "#7CD492",
 	error = "#AC077A",
-	warn = "#FFE629"
+	warn = "#FCE094"
 }
 
 local G = {}
@@ -32,7 +32,7 @@ function G.colorscheme()
 	set(0, "ColorColumn", { bg = colors.cursorLine })
 
 	set(0, "NormalFloat", { bg = "black" })
-	set(0, "FloatBorder", { bg = "black" ,fg = colors.fg })
+	set(0, "FloatBorder", { bg = "black", fg = colors.fg })
 
 	set(0, "Pmenu", { bg = "black", fg = colors.fg })
 
@@ -45,19 +45,28 @@ function G.colorscheme()
 
 	set(0, "Title", { fg = colors.strings, bold = true })
 
-	set(0, "Substitute", { bg = colors.strings, fg = colors.bg })
+	set(0, "Substitute", { bg = "none", fg = colors.special })
+	set(0, "IncSearch", { bg = "none", fg = colors.warn })
+	set(0, "CurSearch", { bg = "none", fg = colors.warn })
+	set(0, "Search", { bg = colors.visual, fg = colors.warn })
 
 	set(0, "CursorLine", { bg = colors.cursorLine })
 	set(0, "Visual", { bg = colors.visual })
 
 	set(0, "Comment", { fg = colors.comments, italic = true })
 	set(0, "Constant", { fg = colors.functions })
+	set(0, "@Variable", { fg = colors.fg })
 	set(0, "String", { fg = colors.strings })
 	set(0, "Identifier", { fg = colors.fg })
 	set(0, "Statement", { fg = colors.keywords })
 	set(0, "Type", { fg = colors.functions, italic = true })
+	set(0, "Operator", { fg = colors.comments })
+	set(0, "Macro", { fg = colors.fg })
+	set(0, "Delimiter", { fg = colors.special })
 
 	set(0, "Special", { fg = colors.fg })
+
+	set(0, "PreProc", { fg = colors.special })
 
 	set(0, "Keyword", { fg = colors.keywords })
 
