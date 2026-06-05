@@ -145,7 +145,7 @@ require("dashboard").setup(
 				}
 			},
 
-			footer = footers.gemmy,
+			footer = footers.sabiduria,
 			vertical_center = true
 		}
 	}

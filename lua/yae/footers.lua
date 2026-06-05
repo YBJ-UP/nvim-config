@@ -10,6 +10,12 @@ local footers = {
 	},
 	nvimbtw = {
 		"Uso neovim por cierto"
+	},
+	sabiduria = {
+		"Hay un dicho chino, no sé chino así que no sé qué dice"
+	},
+	codigo = {
+		'hola.mundo("system.out.println;")'
 	}
 }
 
