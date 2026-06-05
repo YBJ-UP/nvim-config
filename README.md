@@ -47,3 +47,5 @@ Parte del código dentro de core fue tomado de [nvim-lite](https://github.com/ra
 - Integración de [atac](https://github.com/Julien-cpsn/ATAC).
 - Panel de atajos de teclado.
 - Gestor de plugins.
+- Traducir el readme a inglés, tal vez.
+- Mover el tema a su propio repositorio.
