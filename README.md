@@ -1,6 +1,7 @@
 ![Vista previa](media/vista_previa.png)
 # Configuración personal de NeoVim
 Configuración de NeoVim hecha con lua personalizable y extendible que proporciona una base para el desarrollo web y de videojuegos con Godot en NeoVim.
+Parte del código dentro de core fue tomado de [nvim-lite](https://github.com/radleylewis/nvim-lite/tree/master).
 ## Características
 - Integración de GitHub con LazyGit.
 - Integración de Docker con LazyDocker.
@@ -44,6 +45,5 @@ Configuración de NeoVim hecha con lua personalizable y extendible que proporcio
 ## Planes a futuro
 - Hacer que el panel de Godot sí funcione :(.
 - Integración de [atac](https://github.com/Julien-cpsn/ATAC).
-- Selector de temas persistente similar a NvChad
 - Panel de atajos de teclado.
 - Gestor de plugins.
