@@ -38,6 +38,7 @@ Parte del código dentro de core fue tomado de [nvim-lite](https://github.com/ra
 19. [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 20. [terminal_plus.nvim](https://github.com/YBJ-UP/terminal_plus.nvim) (En desarrollo)
 21. [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+22. [2077_theme.nvim](https://github.com/YBJ-UP/2077_theme.nvim)
 # Capturas de pantalla
 ![Uso de Nvim-tree](media/nvim_tree_preview.png)
 
