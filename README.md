@@ -10,12 +10,13 @@ Parte del código dentro de core fue tomado de [nvim-lite](https://github.com/ra
 - Navegación de archivos a través de Nvim-Tree.
 - Navegación de pestañas similar a VSCode.
 - Incluye un tema propio basado en el tema [Cyberpunk 2077](https://github.com/notKvS/2077-zed) para Zed y para [VSCode](https://github.com/endormi/vscode-2077-theme).
-- Varios encabezados y pies de página incluidos.
+- Varios encabezados y pies de página incluidos para el dashboard.
 ## Requisitos
 1. NeoVim >= 0.12.2.
 2. LazyGit.
 3. LazyDocker.
-4. Una fuente de [NerdFonts](https://www.nerdfonts.com/font-downloads).
+4. Treesitter.
+5. Una fuente de [NerdFonts](https://www.nerdfonts.com/font-downloads).
 ## Lista de Plugins
 1. [blink.cmp](https://github.com/saghen/blink.cmp)
 2. [blink.lib](https://github.com/saghen/blink.lib)
@@ -36,13 +37,18 @@ Parte del código dentro de core fue tomado de [nvim-lite](https://github.com/ra
 17. [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 18. [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 19. [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
-20. [terminal_plus.nvim](https://github.com/YBJ-UP/terminal_plus.nvim) (En desarrollo)
-21. [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
-22. [2077_theme.nvim](https://github.com/YBJ-UP/2077_theme.nvim)
+20. [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
+21. [nvim-notify](https://github.com/rcarriga/nvim-notify)
+22. [noice.nvim](https://github.com/folke/noice.nvim)
+23. [terminal_plus.nvim](https://github.com/YBJ-UP/terminal_plus.nvim) (En desarrollo)
+24. [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+25. [2077_theme.nvim](https://github.com/YBJ-UP/2077_theme.nvim)
 # Capturas de pantalla
 ![Uso de Nvim-tree](media/nvim_tree_preview.png)
 
 ![Vista de un proyecto](media/project_preview.png)
+
+![Vista previa de Noice](media/noice-preview.png)
 ## Planes a futuro
 - Hacer que el panel de Godot sí funcione :(.
 - Integración de [atac](https://github.com/Julien-cpsn/ATAC).
