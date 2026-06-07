@@ -11,7 +11,7 @@ local opts = {
 	view = {
 		centralize_selection = true,
 		side = "right",
-		width = 50
+		width = 35
 	},
 	diagnostics = {
 		enable = true
