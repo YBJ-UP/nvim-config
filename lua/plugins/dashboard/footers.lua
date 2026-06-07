@@ -16,6 +16,9 @@ local footers = {
 	},
 	codigo = {
 		'hola.mundo("system.out.println;")'
+	},
+	experienciapromedio = {
+		"Paso más tiempo configurando neovim que programando"
 	}
 }
 
