@@ -38,7 +38,7 @@ M.get_active_packs = function()
 			counter = counter + 1
 		end
 	end
-	print(counter .. "/" .. M.pkg_count .. " paquetes están activos.")
+	return (counter .. "/" .. M.pkg_count .. " paquetes están activos.")
 end
 
 return M

@@ -14,7 +14,7 @@ end
 
 local function active_packs()
 	local m = call_mgr()
-	m.get_active_packs()
+	print( m.get_active_packs() )
 end
 
 local function pack_clean()
