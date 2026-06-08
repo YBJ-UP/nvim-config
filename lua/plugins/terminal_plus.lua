@@ -1,7 +1,13 @@
 vim.pack.add({"https://github.com/YBJ-UP/terminal_plus.nvim"})
 
-vim.keymap.set("n", "<leader>t", function()
+local G = {}
+
+G.open_term = function()
 	local term = require("term")
 	term.setup()
 	term.new()
-end)
+end
+
+vim.keymap.set("n", "<leader>t", G.open_term)
+
+return G
