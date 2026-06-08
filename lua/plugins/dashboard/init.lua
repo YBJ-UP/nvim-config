@@ -13,7 +13,7 @@ require("dashboard").setup(
 		theme = "doom",
 
 		config = {
-			header = titles.eyes2,
+			header = titles.eye,
 
 			center = {
 				{
@@ -158,7 +158,7 @@ require("dashboard").setup(
 				}
 			},
 
-			footer = footers.experienciapromedio,
+			footer = footers.info,
 			vertical_center = true
 		}
 	}
