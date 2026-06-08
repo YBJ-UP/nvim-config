@@ -19,7 +19,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Abrir explorador de archivos',
+					desc = 'Explorador de archivos',
 					desc_hl = 'Title',
 					key = 'e',
 					keymap = 'SPC e',
@@ -67,7 +67,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Abrir terminal',
+					desc = 'Terminal',
 					desc_hl = 'Title',
 					key = 't',
 					keymap = 'SPC t',
@@ -79,7 +79,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Abrir Git',
+					desc = 'Git',
 					desc_hl = 'Title',
 					key = 'g',
 					keymap = 'SPC g',
@@ -91,7 +91,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Abrir Docker',
+					desc = 'Docker',
 					desc_hl = 'Title',
 					key = 'd',
 					keymap = 'SPC ld',
@@ -103,7 +103,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Abrir Mason',
+					desc = 'Mason',
 					desc_hl = 'Title',
 					key = 'm',
 					key_hl = 'Number',
@@ -115,7 +115,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Imprimir directorio actual',
+					desc = 'Directorio actual',
 					desc_hl = 'Title',
 					key = 'c',
 					key_hl = 'Number',
@@ -126,7 +126,7 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Reiniciar configuraciones',
+					desc = 'Reiniciar',
 					desc_hl = 'Title',
 					key = 'r',
 					key_hl = 'Number',
@@ -137,18 +137,18 @@ require("dashboard").setup(
 				{
 					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Editar configuraciones',
+					desc = 'Editar configuración',
 					desc_hl = 'Title',
 					key = 'E',
 					key_hl = 'Number',
 					key_format = ' [%s]',
-					action = 'e ~/.config/nvim/init.lua'
+					action = 'cd ~/.config/nvim | NvimTreeToggle'
 				},
 
 				{
 					icon = '󰩈 ',
 					icon_hl = 'Title',
-					desc = 'Cerrar NeoVim',
+					desc = 'Cerrar',
 					desc_hl = 'Title',
 					key = 'q',
 					key_hl = 'Number',
@@ -158,7 +158,7 @@ require("dashboard").setup(
 				}
 			},
 
-			footer = footers.info,
+			footer = footers.experienciapromedio,
 			vertical_center = true
 		}
 	}
