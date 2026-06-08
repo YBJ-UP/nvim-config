@@ -1,6 +1,7 @@
 local titles = require("plugins.dashboard.titles")
 local footers = require("plugins.dashboard.footers")
 local docker = require("plugins.docker")
+local term = require("plugins.terminal_plus")
 
 vim.pack.add({
 	{ src = "https://github.com/nvimdev/dashboard-nvim" }
@@ -64,6 +65,18 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
+					desc = 'Abrir terminal',
+					desc_hl = 'Title',
+					key = 't',
+					keymap = 'SPC t',
+					key_hl = 'Number',
+					key_format = ' [%s]',
+					action = term.open_term
+				},
+
+				{
 					icon = ' ',
 					icon_hl = 'Title',
 					desc = 'Abrir Git',
@@ -88,15 +101,15 @@ require("dashboard").setup(
 				},
 
 				{
-					icon = ' ',
+					icon = ' ',
 					icon_hl = 'Title',
-					desc = 'Panel de Godot',
+					desc = 'Abrir Mason',
 					desc_hl = 'Title',
-					key = 'gd',
-					keymap = 'SPC gd',
+					key = 'm',
 					key_hl = 'Number',
+					keymap = 'SPC m',
 					key_format = ' [%s]',
-					action = 'Gdt'
+					action = 'Mason'
 				},
 
 				{
