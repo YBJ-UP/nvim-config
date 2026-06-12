@@ -1,6 +1,6 @@
 local function date_text()
-	local date = os.date("%d/%m/%Y - %H:%M:%S")
-	return "󰃭 " .. date
+	local date = os.date("󰃭 %d/%m/%Y -  %H:%M:%S")
+	return date
 end
 
 local function version_text()
@@ -8,6 +8,11 @@ local function version_text()
 	local version_info = version.major .. "." .. version.minor .. "." .. version.patch
 
 	return " " .. version_info
+end
+
+local function current_directory()
+	local current_dir = vim.fn.getcwd()
+	return " " .. current_dir
 end
 
 local titles = {
@@ -335,6 +340,7 @@ local titles = {
 		[[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
 		'',
 		date_text(),
+		--current_directory(), -- no me gusta que no se actualize por sí mismo
 		version_text(),
 		''
 	},
