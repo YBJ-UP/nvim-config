@@ -41,6 +41,17 @@ require("dashboard").setup(
 				},
 
 				{
+					icon = ' ',
+					icon_hl = 'Title',
+					desc = 'Proyectos',
+					desc_hl = 'Title',
+					key = 'p',
+					key_hl = 'Number',
+					key_format = ' [%s]',
+					action = 'cd ~/Proyectos | NvimTreeToggle'
+				},
+
+				{
 					icon = '󰋗 ',
 					icon_hl = 'Title',
 					desc = 'Buscar documentación',
