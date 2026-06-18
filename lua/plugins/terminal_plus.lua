@@ -4,7 +4,7 @@ local G = {}
 
 G.open_term = function()
 	local term = require("term")
-	term.setup({ preset = "spawn_on_bottom" })
+	term.setup({ preset = "spawn_floating" })
 	term.new()
 end
 
