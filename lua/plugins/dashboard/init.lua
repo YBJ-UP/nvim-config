@@ -13,7 +13,7 @@ require("dashboard").setup(
 		theme = "doom",
 
 		config = {
-			header = titles.eye,
+			header = titles.eyes4,
 
 			center = {
 				{
