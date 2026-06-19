@@ -1,7 +1,7 @@
 local titles = require("plugins.dashboard.titles")
 local footers = require("plugins.dashboard.footers")
-local docker = require("plugins.docker")
-local term = require("plugins.terminal_plus")
+-- local docker = require("plugins.docker")
+-- local term = require("plugins.terminal_plus")
 local which = require("plugins.which-key")
 
 vim.pack.add({
