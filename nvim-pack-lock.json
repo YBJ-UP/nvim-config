@@ -9,7 +9,7 @@
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
-      "rev": "bf67998a314236cfba50fe311d60ef03d15d9426",
+      "rev": "5876dd95deeb70aadbe9f1c0b7117a135061cdac",
       "src": "https://github.com/saghen/blink.lib"
     },
     "bufferline.nvim": {
@@ -101,7 +101,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "terminal_plus.nvim": {
-      "rev": "bc3391ca8e4f36d12d2d71d3a58c56879750e1f4",
+      "rev": "bf3c11fe4946bca500664d63a70648c0fef467e4",
       "src": "https://github.com/YBJ-UP/terminal_plus.nvim"
     },
     "toggleterm.nvim": {
