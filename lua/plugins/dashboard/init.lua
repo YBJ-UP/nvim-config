@@ -44,7 +44,7 @@ require("dashboard").setup(
 				item('', 'Directorio actual',		'c', '', 'pwd'),
 				-- item('', 'Reiniciar',				'r', '', 'restart'),
 				-- item('', 'Configuración',			'E', 'SPC rc', 'cd ~/.config/nvim | NvimTreeToggle'),
-				-- item('󰩈', 'Salir',					'q', ':q', 'q'),
+				item('󰩈', 'Salir',					'q', ':q', 'q'),
 			},
 
 			footer = footers.gemmy,
