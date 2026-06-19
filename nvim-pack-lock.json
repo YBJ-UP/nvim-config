@@ -111,6 +111,10 @@
     "transparent.nvim": {
       "rev": "d1335d9eb27bef375180fb93b50c2318add11f14",
       "src": "https://github.com/YBJ-UP/transparent.nvim"
+    },
+    "which-key.nvim": {
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
+      "src": "https://github.com/folke/which-key.nvim"
     }
   }
 }
