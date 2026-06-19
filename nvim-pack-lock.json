@@ -21,7 +21,7 @@
       "src": "https://github.com/nvimdev/dashboard-nvim"
     },
     "gitsigns.nvim": {
-      "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
+      "rev": "2038c666bd9d8a0b7349a0b6ee00dc83104b9ecf",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "godotdev.nvim": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "markview.nvim": {
-      "rev": "576e50fa99091ff47a9920e1b6ef94b2a7c2f036",
+      "rev": "301e431c7b618235f5447d54465c70934bd33668",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason-lspconfig.nvim": {
@@ -73,7 +73,7 @@
       "src": "https://github.com/rcarriga/nvim-dap-ui"
     },
     "nvim-lspconfig": {
-      "rev": "a683e0ddf0cf64c6cd689e18ffb480ade3c162b7",
+      "rev": "fef8b117ad5fb73943913f444f22065c4b834a60",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-notify": {
@@ -109,7 +109,7 @@
       "src": "https://github.com/akinsho/toggleterm.nvim"
     },
     "transparent.nvim": {
-      "rev": "72f02549b41094eba71aebe7332edf232444e8bb",
+      "rev": "d1335d9eb27bef375180fb93b50c2318add11f14",
       "src": "https://github.com/YBJ-UP/transparent.nvim"
     }
   }
