@@ -5,171 +5,47 @@ local term = require("plugins.terminal_plus")
 
 vim.pack.add({
 	{ src = "https://github.com/nvimdev/dashboard-nvim" }
-}
-)
+})
+
+---@param icon string
+---@param desc string
+---@param key string
+---@param keymap string
+---@param action string | function
+---@return table
+local function item(icon, desc, key, keymap, action)
+	return {
+		icon = icon..' ', icon_hl = 'Title',
+		desc = desc, desc_hl = 'Title',
+		key = key, key_hl = 'Number', key_format = ' [%s]',
+		keymap = keymap, action = action
+	}
+end
 
 require("dashboard").setup(
 	{
 		theme = "doom",
 
 		config = {
-			header = titles.eyes4,
+			header = titles.eyes3,
 
 			center = {
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Explorador de archivos',
-					desc_hl = 'Title',
-					key = 'e',
-					keymap = 'SPC e',
-					key_hl = 'Number',
-					key_format = ' [%s]', -- remove default surrounding `[]`
-					action = 'NvimTreeToggle'
-				},
-
-				{
-					icon = '󰥩 ',
-					icon_hl = 'Title',
-					desc = 'Buscar archivos en el directorio',
-					desc_hl = 'Title',
-					key = 'f',
-					keymap = 'SPC f',
-					key_hl = 'Number',
-					key_format = ' [%s]', -- remove default surrounding `[]`
-					action = 'Pick files'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Proyectos',
-					desc_hl = 'Title',
-					key = 'p',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'cd ~/Proyectos | NvimTreeToggle'
-				},
-
-				{
-					icon = '󰋗 ',
-					icon_hl = 'Title',
-					desc = 'Buscar documentación',
-					desc_hl = 'Title',
-					key = "h",
-					keymap = 'SPC h',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'Pick help'
-				},
-
-				{
-					icon = '󰦨 ',
-					icon_hl = 'Title',
-					desc = 'Buscar texto',
-					desc_hl = 'Title',
-					key = 'w',
-					keymap = 'SPC gr',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'Pick grep_live'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Terminal',
-					desc_hl = 'Title',
-					key = 't',
-					keymap = 'SPC t',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = term.open_term
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Git',
-					desc_hl = 'Title',
-					key = 'g',
-					keymap = 'SPC g',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'LazyGitCurrentFile'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Docker',
-					desc_hl = 'Title',
-					key = 'd',
-					keymap = 'SPC ld',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = docker.open_docker
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Mason',
-					desc_hl = 'Title',
-					key = 'm',
-					key_hl = 'Number',
-					keymap = 'SPC m',
-					key_format = ' [%s]',
-					action = 'Mason'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Directorio actual',
-					desc_hl = 'Title',
-					key = 'c',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'pwd'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Reiniciar',
-					desc_hl = 'Title',
-					key = 'r',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'restart'
-				},
-
-				{
-					icon = ' ',
-					icon_hl = 'Title',
-					desc = 'Editar configuración',
-					desc_hl = 'Title',
-					key = 'E',
-					key_hl = 'Number',
-					key_format = ' [%s]',
-					action = 'cd ~/.config/nvim | NvimTreeToggle'
-				},
-
-				{
-					icon = '󰩈 ',
-					icon_hl = 'Title',
-					desc = 'Cerrar',
-					desc_hl = 'Title',
-					key = 'q',
-					key_hl = 'Number',
-					keymap = ':q',
-					key_format = ' [%s]',
-					action = 'q'
-				}
+				item('', 'Explorar directorio',	'e', 'SPC e', 'NvimTreeToggle'),
+				item('󰥩', 'Buscar archivos',		'f', 'SPC f', 'Pick files'),
+				item('', 'Proyectos',				'p', '', 'cd ~/Proyectos | NvimTreeToggle'),
+				item('󰋗', 'Ayuda',					'h', 'SPC h', 'Pick help'),
+				item('󰦨', 'Grep',					'w', 'SPC gr', 'Pick grep_live'),
+				item('', 'Terminal',				't', 'SPC t', term.open_term),
+				item('', 'Git',					'g', 'SPC g', 'LazyGitCurrentFile'),
+				item('', 'Docker',					'd', 'SPC ld', docker.open_docker),
+				item('', 'Mason',					'm', 'SPC m', 'Mason'),
+				item('', 'Directorio actual',		'c', '', 'pwd'),
+				item('', 'Reiniciar',				'r', '', 'restart'),
+				item('', 'Configuración',			'E', '', 'cd ~/.config/nvim | NvimTreeToggle'),
+				item('󰩈', 'Salir',					'q', ':q', 'q'),
 			},
 
-			footer = footers.experienciapromedio,
+			footer = footers.gemmy,
 			vertical_center = true
 		}
 	}
