@@ -67,5 +67,6 @@ local function smart_close_buffer()
 end
 vim.keymap.set('n', '<leader>bd', smart_close_buffer, { desc = 'Smart close buffer/tab' })
 
-vim.keymap.set("n", "<C-Tab>", ":tabnext<CR>")
-vim.keymap.set("n", "<C-S-Tab>", ":tabprevious<CR>")
+-- Estos no parecen funcionar
+-- vim.keymap.set("n", "<C-Tab>", ":tabnext<CR>")
+-- vim.keymap.set("n", "<C-S-Tab>", ":tabprevious<CR>")
