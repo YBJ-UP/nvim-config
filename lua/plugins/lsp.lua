@@ -40,8 +40,6 @@ vim.lsp.enable("lua_ls")
 
 vim.lsp.enable("nil_ls")
 
-vim.keymap.set("n", "<leader>m", ":Mason<CR>")
-
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("lsp", { clear = true }),
 	callback = function(args)
