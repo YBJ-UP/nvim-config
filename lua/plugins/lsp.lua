@@ -4,10 +4,7 @@ vim.pack.add(
 		{ src = "https://github.com/neovim/nvim-lspconfig" },
 
 		{ src = "https://github.com/saghen/blink.lib" },
-		{ src = "https://github.com/saghen/blink.cmp" }, -- blink.cmp depende de blink.lib
-
-		{ src = "https://github.com/mason-org/mason.nvim" },
-		{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+		{ src = "https://github.com/saghen/blink.cmp" },          -- blink.cmp depende de blink.lib
 
 		{ src = 'https://github.com/nvim-treesitter/nvim-treesitter' }, -- autotag depende de tree sitter
 		{ src = 'https://github.com/windwp/nvim-ts-autotag' }
@@ -42,9 +39,6 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable("lua_ls")
 
 vim.lsp.enable("nil_ls")
-
-require("mason").setup()
-require("mason-lspconfig").setup()
 
 vim.keymap.set("n", "<leader>m", ":Mason<CR>")
 
